@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us | White Water Rafting</title>
+<meta name="description" content="Contact White Water Rafting for bookings and questions.">
+<link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+<header>
+  <h1>White Water Rafting</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="trips.html">Trips</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Contact Us</h2>
+
+  <section>
+    <p><strong>Address:</strong> Jinja, Uganda</p>
+    <p><strong>Phone:</strong> +256780227088</p>
+    <p><strong>Email:</strong> rmuwonge@gmail.com</p>
+  </section>
+
+  <section>
+    <h3>Location</h3>
+    <iframe src="https://maps.google.com/maps?q=jinja%20uganda&output=embed" width="300" height="200"></iframe>
+  </section>
+
+  <section>
+    <h3>Send Message</h3>
+    <form>
+      <label>Name:</label><br>
+      <input type="text"><br><br>
+
+      <label>Email:</label><br>
+      <input type="email"><br><br>
+
+      <label>Purpose:</label><br>
+      <select>
+        <option>Booking</option>
+        <option>Question</option>
+        <option>Feedback</option>
+      </select><br><br>
+
+      <label>Message:</label><br>
+      <textarea></textarea><br><br>
+
+      <label><input type="checkbox"> Subscribe to newsletter</label><br><br>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Our Team</h3>
+    <figure><img src="images/peter.jpg" width="150"><figcaption>John – Guide</figcaption></figure>
+    <figure><img src="images/woman.avif" width="150"><figcaption>Sarah – Safety</figcaption></figure>
+    <figure><img src="images/00.jpg" width="150"><figcaption>Mike – Instructor</figcaption></figure>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 White Water Rafting</p>
+</footer>
+</body>
+</html>
