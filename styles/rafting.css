@@ -1,0 +1,132 @@
+
+
+:root {
+    --primary-color: #1e6091;
+      --accent-color: #f0f0f0;
+      --text-light: #ffffff;
+      --text-dark: #333333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--accent-color);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      padding: 1rem;
+      background-color: var(--primary-color);
+    }
+
+    header img {
+      width: 120px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .hero img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hero h1 {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(30, 96, 145, 0.9);
+      color: var(--text-light);
+      padding: 1rem;
+      font-size: 2rem;
+    }
+
+    .hero article {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background-color: #ffffff;
+      padding: 1rem;
+      max-width: 300px;
+    }
+
+    .hero article img {
+      float: right;
+      width: 80px;
+      margin-left: 0.5rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    section {
+      background-color: #ffffff;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    figure {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+
+    figure img {
+      width: 150px;
+      display: block;
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: var(--primary-color);
+      color: var(--text-light);
+    }
+
+    .socialmedia img {
+      width: 32px;
+      margin-left: 0.5rem;
+    }
+
+    .socialmedia a {
+      text-decoration: none;
+    }
