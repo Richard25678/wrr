@@ -1,74 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about our white water rafting company, our mission, history, and adventure experiences.">
-  <meta name="author" content="Muwonge Richard">
-  <title>About Us | White Water Rafting</title>
-  <link rel="stylesheet" href="styles/rafting.css">
-  
+<meta charset="UTF-8">
+<title>White Water Rafting | Home & Trips</title>
+<meta name="description" content="White water rafting adventures, trips, and booking information.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: #0a4d68;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+  font-size: 3rem;
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* BUTTON */
+.btn {
+  background: #ff7b00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* FORM */
+form {
+  padding: 20px;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: left;
+}
+
+/* FOOTER */
+footer {
+  background: #0a4d68;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <img src="images/rafting-logo-design-river-white-water-rafting-logo_1594-563.avif" alt="White Water Rafting Logo">
+  <h2>White Water Rafting</h2>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="trips.html">Trips</a>
-    <a href="contact.html">Contact Us</a>
+    <a href="#home">Home</a>
+    <a href="#trips">Trips</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main>
-  <div class="hero">
-    <img src="images/88.jpg" alt="Rafting adventure">
-    <h1>White Water Rafting</h1>
-    <article>
-      <img src="images/download (1).jpg" alt="Happy rafting guide">
-      <p>Our mission is to provide safe, exciting, and unforgettable white water rafting adventures while respecting nature and building strong teamwork experiences.</p>
-    </article>
+<!-- HOME -->
+<section id="home" class="hero">
+  <img src="images/99.jpg" alt="Rafting Adventure">
+  <h1>Adventure Starts Here!</h1>
+</section>
+
+<section class="grid">
+  <div>
+    <h3>Our Mission</h3>
+    <p>We provide safe and exciting white water rafting trips for friends and families. Our professional guides ensure unforgettable adventures.</p>
+    <a href="#trips" class="btn">View Trips</a>
   </div>
+  <div>
+    <img src="images/rafting-logo-design-river-white-water-rafting-logo_1594-563.avif" alt="Rafting Image">
+  </div>
+</section>
 
-  <section>
-    <h2>History</h2>
-    <p>White Water Rafting was founded by adventure lovers who wanted to share the excitement of river rafting with the world. Over the years, we have safely guided thousands of guests.</p>
+<section class="grid">
+  <div>
+    <img src="images/88.jpg" alt="Rafting Image">
+  </div>
+  <div>
+    <h3>Why Choose Us?</h3>
+    <p>Experienced staff, modern equipment, and beautiful rivers make us the best rafting company.</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<form>
+  <h3>Join Our Newsletter</h3>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <button class="btn">Join Newsletter</button>
+</form>
+
+<!-- TRIPS -->
+<section id="trips">
+  <h2 style="text-align:center;">Our Trips</h2>
+
+  <section class="grid">
+    <div>
+      <img src="images/download (1).jpg" alt="">
+      <h3>River Rush</h3>
+      <p>Fast and exciting 2-hour rafting adventure.</p>
+    </div>
+
+    <div>
+      <img src="images/download.jpg" alt="">
+      <h3>Family Float</h3>
+      <p>Safe and enjoyable rafting for families.</p>
+    </div>
   </section>
 
-  <section>
-    <h2>Adventure Awaits You!</h2>
-    <figure>
-      <img src="images/download (1).jpg" alt="Rafting adventure">
-      <figcaption>River Rapids</figcaption>
-    </figure>
-    <figure>
-      <img src="images/88.jpg" alt="Rafting team">
-      <figcaption>Team Rafting</figcaption>
-    </figure>
-    <figure>
-      <img src="images/555.jpg" alt="Rafting in action">
-      <figcaption>Fast Waters</figcaption>
-    </figure>
-    <figure>
-      <img src="images/99.jpg" alt="Rafting crew">
-      <figcaption>Expert Guides</figcaption>
-    </figure>
-    <figure>
-      <img src="images/88.jpg" alt="Rafting fun">
-      <figcaption>Unforgettable Fun</figcaption>
-    </figure>
+  <section class="grid">
+    <div>
+      <img src="images/555.jpg" alt="Extreme Rapids">
+      <h3>Extreme Rapids</h3>
+      <p>For experienced adventurers seeking thrills.</p>
+    </div>
+
+    <div>
+      <a href="#contact" class="btn">Book Now</a>
+    </div>
   </section>
-</main>
+
+  <h3 style="text-align:center;">Trip Summary</h3>
+  <table>
+    <tr>
+      <th>Trip</th>
+      <th>Price</th>
+      <th>Duration</th>
+    </tr>
+    <tr>
+      <td>River Rush</td>
+      <td>$50</td>
+      <td>2 Hours</td>
+    </tr>
+    <tr>
+      <td>Family Float</td>
+      <td>$30</td>
+      <td>3 Hours</td>
+    </tr>
+    <tr>
+      <td>Extreme Rapids</td>
+      <td>$80</td>
+      <td>4 Hours</td>
+    </tr>
+  </table>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:20px;">
+  <h2>Contact Us</h2>
+  <p>Email: rmuwonge054@gmail.com</p>
+  <p>Phone: +256 780227088</p>
+</section>
 
 <footer>
-  <p>© 2026 White Water Rafting | Muwonge Richard</p>
-  <nav class="socialmedia">
-    <a href="https://facebook.com"><img src="images/11.png" alt="Facebook"></a>
-    <a href="https://twitter.com"><img src="images/twittery.png.png" alt="Twitter"></a>
-    <a href="https://instagram.com"><img src="images/13.avif" alt="Instagram"></a>
-  </nav>
+  <p>© 2026 White Water Rafting</p>
 </footer>
 
 </body>
