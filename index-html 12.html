@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Richard Muwonge | Software Developer</title>
+
+<style>
+:root{
+    --primary:#00ffff;
+    --dark-bg:#0f2027;
+    --light-bg:#f4f4f4;
+    --dark-text:white;
+    --light-text:#111;
+}
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:var(--dark-text);
+    transition:0.4s;
+}
+
+body.light{
+    background:var(--light-bg);
+    color:var(--light-text);
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+body.light nav{
+    background:white;
+}
+
+.logo{
+    font-weight:bold;
+    font-size:1.3rem;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:inherit;
+    font-weight:500;
+}
+
+.toggle-btn{
+    cursor:pointer;
+    padding:6px 12px;
+    border-radius:20px;
+    background:var(--primary);
+    color:black;
+    border:none;
+}
+
+.hamburger{
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+}
+
+.profile{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid var(--primary);
+    box-shadow:0 0 20px var(--primary);
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    background:var(--primary);
+    cursor:pointer;
+    font-weight:bold;
+}
+
+section{
+    padding:90px 8%;
+}
+
+/* SKILLS */
+.skill{
+    margin:15px 0;
+}
+
+.progress{
+    background:#444;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress div{
+    height:10px;
+    background:var(--primary);
+    width:0;
+    transition:1.5s;
+}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    padding:20px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    nav ul{
+        position:absolute;
+        top:60px;
+        right:0;
+        background:black;
+        flex-direction:column;
+        width:200px;
+        display:none;
+        padding:20px;
+    }
+
+    nav ul.show{
+        display:flex;
+    }
+
+    .hamburger{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Richard</div>
+    <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleMode()">Mode</button>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<section class="hero" id="home">
+    <img src="richard.png" class="profile">
+    <h1>Hello, I'm <span>Richard Muwonge</span></h1>
+    <h3 id="typing"></h3>
+    <a href="RICHARD MUWONGE.pdf" download><button class="btn">Download CV</button></a>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skill">HTML
+        <div class="progress"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">CSS
+        <div class="progress"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">JavaScript
+        <div class="progress"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill">Python
+        <div class="progress"><div style="width:75%"></div></div>
+    </div>
+
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal website using HTML, CSS & JS.</p>
+        </div>
+        <div class="card">
+            <h3>Django App</h3>
+            <p>Full-stack web application built with Django.</p>
+        </div>
+        <div class="card">
+            <h3>Python Automation</h3>
+            <p>Automation tool solving real-world tasks.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: richard.muwoonge054@gmail.com</p>
+    <p><a href="https://github.com/Richard25678" target="_blank">GitHub</a></p>
+</section>
+
+<script>
+/* DARK/LIGHT MODE */
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+
+/* MOBILE MENU */
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+/* TYPING EFFECT */
+const words=["Software Developer","Web Developer","Tech Enthusiast"];
+let i=0,j=0,current="",isDeleting=false;
+
+function type(){
+    current=words[i];
+    document.getElementById("typing").textContent=
+        isDeleting?current.substring(0,j--):current.substring(0,j++);
+
+    if(!isDeleting&&j===current.length+1){
+        isDeleting=true;
+        setTimeout(type,1000);
+    }else if(isDeleting&&j===0){
+        isDeleting=false;
+        i=(i+1)%words.length;
+    }
+    setTimeout(type,isDeleting?50:100);
+}
+type();
+</script>
+
+</body>
+</html>
